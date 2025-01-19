@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Selectores CSS | femCoders Club</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Demo de Selectores CSS</h1>
+      <p>Un proyecto práctico de femCoders Club</p>
+    </header>
+
+    <main>
+      <!-- 1. Selectores Básicos -->
+      <section class="section">
+        <h2>1. Selectores Básicos</h2>
+        <!-- Selector por etiqueta -->
+        <p>Este es un párrafo con selector por etiqueta.</p>
+
+        <!-- Selector por clase -->
+        <p class="destacado">Este es un párrafo con selector por clase.</p>
+
+        <!-- Selector por ID -->
+        <h1 id="titulo-principal">
+          Este es un encabezado con selector por ID.
+        </h1>
+
+        <!-- Ejemplo práctico -->
+        <div class="boton">Haz clic aquí</div>
+      </section>
+
+      <section class="section">
+        <h2>2. Selectores Avanzados</h2>
+        <div class="container">
+          <!-- Selectores de atributos -->
+          <input type="text" placeholder="Texto de ejemplo" />
+          <input type="password" placeholder="Contraseña" />
+          <a href="https://example.com">Enlace HTTPS</a>
+          <a href="http://example.com">Enlace HTTP</a>
+
+          <!-- Selectores de descendientes -->
+          <div class="descendientes">
+            <p>Párrafo descendiente 1</p>
+            <div>
+              <p>Párrafo descendiente 2</p>
+            </div>
+          </div>
+
+          <!-- Selectores de hijos directos -->
+          <div class="hijos">
+            <p>Hijo directo 1</p>
+            <div>
+              <p>No es hijo directo</p>
+            </div>
+          </div>
+
+          <!-- Selectores de hermanos adyacentes -->
+          <h1>Título</h1>
+          <p>Primer párrafo hermano adyacente</p>
+          <p>Segundo párrafo (no afectado)</p>
+
+          <!-- Selectores de hermanos generales -->
+          <h1>Otro Título</h1>
+          <p>Primer párrafo hermano general</p>
+          <p>Segundo párrafo hermano general</p>
+
+          <!-- Pseudoclases -->
+          <a href="#" class="pseudo">Enlace con hover</a>
+
+          <!-- Pseudoelementos -->
+          <p class="pseudo-elemento">Texto con pseudoelemento</p>
+        </div>
+      </section>
+
+      <!-- 3. Combinaciones de Selectores -->
+      <section class="section">
+        <h2>3. Combinaciones de Selectores</h2>
+
+        <button class="btn">Hover sobre mí</button>
+        <div class="container">
+          <div class="special">
+            <p>Primer párrafo dentro de un div con clase "special".</p>
+            <p>Segundo párrafo dentro de un div con clase "special".</p>
+          </div>
+          <div>
+            <p>Este párrafo no pertenece a un div con clase "special".</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Selectores de Tipografía -->
+      <section class="section">
+        <h2>4. Selectores de Tipografía</h2>
+        <div class="container">
+          <!-- Selector :first-child -->
+          <div class="first-child-example">
+            <p>Primer párrafo dentro del contenedor (negrita).</p>
+            <p>Segundo párrafo dentro del contenedor.</p>
+          </div>
+
+          <!-- Selector :nth-child -->
+          <ul class="nth-child-example">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+          </ul>
+
+          <!-- Selector alternante (ol example) -->
+          <h3>Ejemplo práctico: Lista numerada con estilos alternantes</h3>
+          <ol class="alternating-list">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 5. Selectores Estructurales -->
+      <section class="section">
+        <h2>5. Selectores Estructurales</h2>
+        <div class="container">
+          <!-- Selector :root -->
+          <div class="root-example">
+            <p>Este texto utiliza una variable CSS definida en :root.</p>
+          </div>
+
+          <!-- Selector :empty -->
+          <div class="empty-example">
+            <p>Este párrafo tiene contenido.</p>
+            <div></div>
+            <!-- Este div está vacío -->
+          </div>
+
+          <!-- Selector :not -->
+          <div class="not-example">
+            <p class="highlight">Este párrafo tiene la clase "highlight".</p>
+            <p>Este párrafo no tiene la clase "highlight".</p>
+          </div>
+
+          <!-- Ejemplo práctico: Tema oscuro -->
+          <h3>Ejemplo práctico: Tema oscuro</h3>
+          <button onclick="toggleDarkMode()">Cambiar Tema</button>
+          <div class="theme-example">
+            <p>Texto de ejemplo para el tema claro/oscuro.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Selectores de Interfaz de Usuario -->
+      <section class="section">
+        <h2>6. Selectores de Interfaz de Usuario</h2>
+        <div class="container">
+          <!-- Selectores para formularios -->
+          <form>
+            <label for="campo-habilitado">Campo habilitado:</label>
+            <input
+              id="campo-habilitado"
+              type="text"
+              placeholder="Escribe aquí..."
+            />
+
+            <label for="campo-deshabilitado">Campo deshabilitado:</label>
+            <input
+              id="campo-deshabilitado"
+              type="text"
+              placeholder="No disponible"
+              disabled
+            />
+
+            <label for="campo-foco">Campo con foco:</label>
+            <input id="campo-foco" type="text" placeholder="Haz clic aquí..." />
+          </form>
+
+          <!-- Ejemplo práctico: Botón personalizado -->
+          <h3>Ejemplo práctico: Botón personalizado</h3>
+          <button class="btn">Enviar</button>
+        </div>
+      </section>
+      <section class="section">
+        <h2>7. Preprocesadores CSS: Sass y Less</h2>
+        <div class="container">
+          <!-- Botones con estilos reutilizables -->
+          <button class="primary-button">Botón Primario</button>
+          <button class="secondary-button">Botón Secundario</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
